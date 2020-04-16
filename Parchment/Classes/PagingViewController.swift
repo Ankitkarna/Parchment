@@ -42,9 +42,9 @@ open class PagingViewController<T: PagingItem>:
     set { options.menuItemSpacing = newValue }
   }
     
-    public var menuPadding: CGFloat {
-        get { return options.menuPadding }
-        set { options.menuPadding = newValue }
+    public var menuPaddingInsets: UIEdgeInsets {
+        get { return options.menuPaddingInsets }
+        set { options.menuPaddingInsets = newValue }
     }
 
   /// Determine the insets at around all the menu items. _Default:

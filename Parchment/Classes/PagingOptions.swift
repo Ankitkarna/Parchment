@@ -5,7 +5,7 @@ public class PagingOptions {
   public var menuItemSource: PagingMenuItemSource
   public var menuItemSpacing: CGFloat
   public var menuInsets: UIEdgeInsets
-  public var menuPadding: CGFloat
+  public var menuPaddingInsets: UIEdgeInsets
   public var menuHorizontalAlignment: PagingMenuHorizontalAlignment
   public var menuTransition: PagingMenuTransition
   public var menuInteraction: PagingMenuInteraction
@@ -103,6 +103,6 @@ public class PagingOptions {
     menuBackgroundColor = UIColor.white
     borderColor = UIColor(white: 0.9, alpha: 1)
     indicatorColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
-    menuPadding = 0
+    menuPaddingInsets = .zero
   }
 }

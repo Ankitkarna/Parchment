@@ -45,7 +45,10 @@ open class PagingView: UIView {
     pageView.translatesAutoresizingMaskIntoConstraints = false
     
     let metrics = [
-        "padding": options.menuPadding,
+        "leftPadding": options.menuPaddingInsets.left,
+        "rightPadding": options.menuPaddingInsets.right,
+        "topPadding": options.menuPaddingInsets.top,
+        "bottomPadding": options.menuPaddingInsets.bottom,
         "height": options.menuHeight]
     
     let views = [
@@ -59,7 +62,7 @@ open class PagingView: UIView {
     #endif
     
     let horizontalCollectionViewContraints = NSLayoutConstraint.constraints(
-      withVisualFormat: "H:|-(padding)-[collectionView]-(padding)-|",
+      withVisualFormat: "H:|-(leftPadding)-[collectionView]-(rightPadding)-|",
       options: formatOptions,
       metrics: metrics,
       views: views)
@@ -71,7 +74,7 @@ open class PagingView: UIView {
       views: views)
     
     let verticalContraints = NSLayoutConstraint.constraints(
-      withVisualFormat: "V:|[collectionView(==height)][pageView]|",
+      withVisualFormat: "V:|-(topPadding)-[collectionView(==height)]-(bottomPadding)-[pageView]|",
       options: formatOptions,
       metrics: metrics,
       views: views)
